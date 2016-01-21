@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">EspressoDemo</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="user_id">user id</string>
+    <string name="password">password</string>
+    <string name="login">Login</string>
+
+    <string name="error_pw_is_less_than_4">パスワードを4文字以上にしてください。</string>
+    <string name="error_pw_needs_numbers">パスワードに数字がありません。</string>
+    <string name="error_pw_needs_characters">パスワードに文字がありません。</string>
+    <string name="error_pw_is_empty">パスワードを入力してください。</string>
+    <string name="error_user_id_is_empty">ユーザーIDを入力してください。</string>
+
+    <string name="hello_world">Hello World, %1$s!!</string>
+
+</resources>
