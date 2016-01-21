@@ -44,7 +44,7 @@
         android:inputType="textPassword"/>
 
     <Button
-        android:id="@+id/login_button"
+        android:id="@+id/signup_button"
         android:layout_width="160dp"
         android:layout_height="50dp"
         android:layout_below="@+id/password"
@@ -53,7 +53,7 @@
         android:layout_marginRight="20dp"
         android:layout_marginTop="30dp"
         android:background="@android:color/holo_red_light"
-        android:text="@string/login"
+        android:text="@string/sign_up"
         android:textColor="@android:color/white"/>
 
 
