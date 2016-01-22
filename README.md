@@ -1,8 +1,10 @@
 # EspressoDemo
-this is a sample app with test code using Espresso.
-the gif shows that how test code witten in Espresso goes on a screen.
+this is a sample app with test code using Espresso.  
+ 
+the gif shows that how test code witten in Espresso goes on a screen.  
+ 
 ![yrI0MJ](http://cdn.makeagif.com/media/1-22-2016/yrI0MJ.gif)
-<br/ >
+　
 # Lisence
 ```
 Copyright 2016 Taku Semba
