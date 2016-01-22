@@ -1,10 +1,13 @@
 package com.takusemba.espressodemo;
 
 import android.support.test.InstrumentationRegistry;
+import android.support.test.espresso.Espresso;
+import android.support.test.espresso.IdlingResource;
 import android.support.test.espresso.matcher.BoundedMatcher;
 import android.support.test.runner.AndroidJUnit4;
 import android.support.v4.content.ContextCompat;
 import android.test.ActivityInstrumentationTestCase2;
+import android.text.format.DateUtils;
 import android.widget.TextView;
 
 import org.hamcrest.Description;
@@ -88,11 +91,15 @@ public class SignUpTest extends ActivityInstrumentationTestCase2<SignUpActivity>
 		onView(withId(R.id.signup_button)).perform(click());
 		onView(withId(R.id.error_message)).check(matches(withText(activity.getString(R.string.error_pw_needs_characters))));
 
-	}
 
-	@Test
-	public void checkColor() {
-		onView(withId(R.id.test_id)).check(matches(withColor(is(ContextCompat.getColor(activity, R.color.colorPrimary)))));
+		// Now we wait 8 seconds for some reason
+		IdlingResource idlingResource = new ElapsedTimeIdlingResource(DateUtils.SECOND_IN_MILLIS * 8);
+		Espresso.registerIdlingResources(idlingResource);
+
+		onView(withId(R.id.error_message)).check(matches(withColor(is(ContextCompat.getColor(activity, android.R.color.holo_red_light)))));
+
+		// Clean up
+		Espresso.unregisterIdlingResources(idlingResource);
 	}
 
 	@After
