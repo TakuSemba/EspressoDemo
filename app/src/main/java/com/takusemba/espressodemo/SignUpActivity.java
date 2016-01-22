@@ -36,7 +36,7 @@ public class SignUpActivity extends AppCompatActivity implements Button.OnClickL
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_signup);
         ButterKnife.bind(this);
         setSupportActionBar(mToolbar);
         mLoginButton.setOnClickListener(this);
