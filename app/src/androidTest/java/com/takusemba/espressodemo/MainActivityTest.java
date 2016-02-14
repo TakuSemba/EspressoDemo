@@ -17,7 +17,10 @@ import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
+import static org.hamcrest.CoreMatchers.anything;
+import static org.hamcrest.Matchers.hasToString;
 import static org.hamcrest.Matchers.not;
+import static org.hamcrest.core.StringStartsWith.startsWith;
 
 @RunWith(AndroidJUnit4.class)
 public class MainActivityTest {
@@ -29,12 +32,13 @@ public class MainActivityTest {
 		onView(withId(R.id.text))
 				.check(matches(not(isDisplayed())));
 
-		onData(withValue(270))
+		onData(anything())
 				.inAdapterView(withId(R.id.list))
+				.atPosition(10)
 				.perform(click());
 
 		onView(withId(R.id.text))
-				.check(matches(withText("270")))
+				.check(matches(withText("10")))
 				.check(matches(isDisplayed()));
 
 		onData(withValue(39))
@@ -45,8 +49,7 @@ public class MainActivityTest {
 				.check(matches(withText("39")))
 				.check(matches(isDisplayed()));
 
-		onData(withValue(193))
-				.inAdapterView(withId(R.id.list))
+		onData(hasToString(startsWith("193")))
 				.perform(click());
 
 		onView(withId(R.id.text))
