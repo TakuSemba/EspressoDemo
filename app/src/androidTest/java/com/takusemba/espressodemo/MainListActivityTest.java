@@ -23,7 +23,7 @@ import static org.hamcrest.Matchers.not;
 import static org.hamcrest.core.StringStartsWith.startsWith;
 
 @RunWith(AndroidJUnit4.class)
-public class MainActivityTest {
+public class MainListActivityTest {
 	@Rule
 	public ActivityTestRule<MainListActivity> activityRule = new ActivityTestRule<>(MainListActivity.class);
 

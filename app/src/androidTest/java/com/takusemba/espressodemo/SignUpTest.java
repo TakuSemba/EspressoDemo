@@ -93,13 +93,13 @@ public class SignUpTest extends ActivityInstrumentationTestCase2<SignUpActivity>
 
 
 		// Now we wait 2 seconds for some reason
-		IdlingResource idlingResource = new ElapsedTimeIdlingResource(DateUtils.SECOND_IN_MILLIS * 2);
-		Espresso.registerIdlingResources(idlingResource);
+//		IdlingResource idlingResource = new ElapsedTimeIdlingResource(DateUtils.SECOND_IN_MILLIS * 2);
+//		Espresso.registerIdlingResources(idlingResource);
 
 		onView(withId(R.id.error_message)).check(matches(withColor(is(ContextCompat.getColor(activity, android.R.color.holo_red_light)))));
 
 		// Clean up
-		Espresso.unregisterIdlingResources(idlingResource);
+//		Espresso.unregisterIdlingResources(idlingResource);
 	}
 
 	@After
