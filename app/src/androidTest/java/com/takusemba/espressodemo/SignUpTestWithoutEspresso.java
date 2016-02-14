@@ -38,7 +38,7 @@ public class SignUpTestWithoutEspresso extends ActivityInstrumentationTestCase2<
     }
 
     @Test
-    public void checkSignUp() {
+    public void testCheckSignUp() {
         final EditText userIdText = (EditText) activity.findViewById(R.id.user_id);
         final EditText passwordText = (EditText) activity.findViewById(R.id.password);
         final Button button = (Button) activity.findViewById(R.id.signup_button);
@@ -63,7 +63,7 @@ public class SignUpTestWithoutEspresso extends ActivityInstrumentationTestCase2<
     }
 
     @Test
-    public void checkErrorMessage() {
+    public void testCheckErrorMessage() {
         final EditText userIdText = (EditText) activity.findViewById(R.id.user_id);
         final EditText passwordText = (EditText) activity.findViewById(R.id.password);
         final Button button = (Button) activity.findViewById(R.id.signup_button);

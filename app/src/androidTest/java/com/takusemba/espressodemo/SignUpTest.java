@@ -49,7 +49,7 @@ public class SignUpTest extends ActivityInstrumentationTestCase2<SignUpActivity>
 	}
 
 	@Test
-	public void checkSignUp() {
+	public void testCheckSignUp() {
 		// Type text and then press the button.
 		onView(withId(R.id.user_id))
 				.perform(replaceText(userId));
@@ -64,7 +64,7 @@ public class SignUpTest extends ActivityInstrumentationTestCase2<SignUpActivity>
 	}
 
 	@Test
-	public void checkErrorMessage() {
+	public void testCheckErrorMessage() {
 
 		onView(withId(R.id.user_id)).perform(replaceText(""));
 		onView(withId(R.id.password)).perform(replaceText(password), closeSoftKeyboard());
