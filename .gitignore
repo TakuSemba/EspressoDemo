@@ -32,7 +32,6 @@ local.properties
 .DS_Store
 
 # IntelliJ
-.idea/
 *.ipr
 *.iws
 
