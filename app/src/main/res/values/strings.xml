@@ -5,6 +5,7 @@
     <string name="user_id">user id</string>
     <string name="password">password</string>
     <string name="sign_up">Sign Up</string>
+    <string name="start_list_activity">Start ListActivity</string>
 
     <string name="error_pw_is_less_than_4">パスワードを4文字以上にしてください。</string>
     <string name="error_pw_needs_numbers">パスワードに数字がありません。</string>

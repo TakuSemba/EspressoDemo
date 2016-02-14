@@ -92,8 +92,8 @@ public class SignUpTest extends ActivityInstrumentationTestCase2<SignUpActivity>
 		onView(withId(R.id.error_message)).check(matches(withText(activity.getString(R.string.error_pw_needs_characters))));
 
 
-		// Now we wait 3 seconds for some reason
-		IdlingResource idlingResource = new ElapsedTimeIdlingResource(DateUtils.SECOND_IN_MILLIS * 3);
+		// Now we wait 2 seconds for some reason
+		IdlingResource idlingResource = new ElapsedTimeIdlingResource(DateUtils.SECOND_IN_MILLIS * 2);
 		Espresso.registerIdlingResources(idlingResource);
 
 		onView(withId(R.id.error_message)).check(matches(withColor(is(ContextCompat.getColor(activity, android.R.color.holo_red_light)))));
